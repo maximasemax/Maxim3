@@ -1,30 +1,24 @@
 public class Computer {
-    private String keyboard;
-    private String mouse;
-    private String monitor;
-    private String cpu;
-    private String motherboard;
-    private String videoAdapter;
-    private String ram;
-    private String hdd;
-    private String headphones;
+    private String name;
+    private Mouse mouse;
+    private VideoAdapter videoAdapter;
+    private Cpu cpu;
+    private Keyboard keyboard;
+    private Motherboard motherboard;
+    private Ram ram;
 
-    public Computer(String keyboard, String mouse, String monitor, String cpu, String motherboard, String videoAdapter, String ram, String hdd, String headphones) {
-        this.keyboard = keyboard;
+    public Computer(String name, Mouse mouse, VideoAdapter videoAdapter, Cpu cpu, Keyboard keyboard, Motherboard motherboard, Ram ram) {
+        this.name = name;
         this.mouse = mouse;
-        this.monitor = monitor;
-        this.cpu = cpu;
-        this.motherboard = motherboard;
         this.videoAdapter = videoAdapter;
+        this.cpu = cpu;
+        this.keyboard = keyboard;
+        this.motherboard = motherboard;
         this.ram = ram;
-        this.hdd = hdd;
-        this.headphones = headphones;
-
-        /*return "keyboard" + this.keyboard + "mouse" + this.mouse + "monitor" + this.monitor + "cpu" + this.cpu + "motherboard" + this.motherboard + "videoAdapter" + this.videoAdapter + "ram" + this.ram + "hdd" + this.hdd + "earphones" + this.earphones */
     }
     public String toString(){
-        return "I hope my future computer" + "\ncpu: " + this.cpu + "\nmotherboard: " + this.motherboard + "\nram: " + this.ram + "\nvideoAdapter: " + this.videoAdapter + "\nhdd: " + this.hdd + "\nkeyboard: " + this.keyboard + "\nmouse: " + this.mouse + "\nheadphones: " + this.headphones + "\nmonitor: " + this.monitor;
 
+        return "Computer name: " + this.name + ".\n" + this.cpu + "\n" + this.videoAdapter + "\n" + this.mouse + "\n" + this.keyboard + "\n" + this.motherboard + "\n" + this.ram;
     }
 }
 
