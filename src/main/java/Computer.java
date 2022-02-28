@@ -1,4 +1,5 @@
 public class Computer {
+    private AssemblyIn assemblyIn;
     private String name;
     private Mouse mouse;
     private VideoAdapter videoAdapter;
@@ -16,9 +17,30 @@ public class Computer {
         this.motherboard = motherboard;
         this.ram = ram;
     }
-    public String toString(){
 
-        return "Computer name: " + this.name + ".\n" + this.cpu + "\n" + this.videoAdapter + "\n" + this.mouse + "\n" + this.keyboard + "\n" + this.motherboard + "\n" + this.ram;
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("Computer type: ");
+        stringBuilder.append(assemblyIn.Frame);
+        stringBuilder.append("\n\n");
+        stringBuilder.append("Computer name: ");
+        stringBuilder.append(this.name);
+        stringBuilder.append(".\n");
+        stringBuilder.append(this.cpu);
+        stringBuilder.append("\n");
+        stringBuilder.append(this.videoAdapter);
+        stringBuilder.append("\n");
+        stringBuilder.append(this.mouse);
+        stringBuilder.append("\n");
+        stringBuilder.append(this.keyboard);
+        stringBuilder.append("\n");
+        stringBuilder.append(this.motherboard);
+        stringBuilder.append("\n");
+        stringBuilder.append(this.ram);
+
+        return stringBuilder.toString();
+
+        //return "Computer name: " + this.name + ".\n" + this.cpu + "\n" + this.videoAdapter + "\n" + this.mouse + "\n" + this.keyboard + "\n" + this.motherboard + "\n" + this.ram;
     }
 }
 

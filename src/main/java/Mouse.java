@@ -8,8 +8,19 @@ public class Mouse {
         this.dpi = dpi;
         this.weight = weight;
     }
-        public String toString() {
-        return "\nMouse: " + this.name + ".\nCharacteristic: " + "dpi: " + this.dpi + ", weight: " + this.weight + ".";
+
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("\nMouse: ");
+        stringBuilder.append(this.name);
+        stringBuilder.append(".\nCharacteristic: ");
+        stringBuilder.append("dpi: ");
+        stringBuilder.append(this.dpi);
+        stringBuilder.append(", weight: ");
+        stringBuilder.append(this.weight);
+        stringBuilder.append(".");
+        return stringBuilder.toString();
+        //return "\nMouse: " + this.name + ".\nCharacteristic: " + "dpi: " + this.dpi + ", weight: " + this.weight + ".";
     }
 
 }
