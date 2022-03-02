@@ -21,7 +21,7 @@ public class Computer {
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("Computer type: ");
-        stringBuilder.append(assemblyIn.Frame);
+        stringBuilder.append(assemblyIn.FRAME);
         stringBuilder.append("\n\n");
         stringBuilder.append("Computer name: ");
         stringBuilder.append(this.name);

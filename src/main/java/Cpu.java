@@ -1,10 +1,10 @@
 public class Cpu {
     private String name;
     private String socket;
-    private int cores;
-    private int frequency;
+    private String cores;
+    private String frequency;
 
-    public Cpu(String name, String socket, int cores, int frequency) {
+    public Cpu(String name, String socket, String cores, String frequency) {
         this.name = name;
         this.socket = socket;
         this.cores = cores;

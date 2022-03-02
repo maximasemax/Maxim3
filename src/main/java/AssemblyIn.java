@@ -1,5 +1,5 @@
 public enum AssemblyIn {
-    Frame(),
-    InTheTable();
+    FRAME,
+    INTHETABLE;
 
 }
