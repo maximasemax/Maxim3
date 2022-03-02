@@ -13,7 +13,7 @@ public class ComputerCreator {
         VideoAdapter max1 = new VideoAdapter("RTX 3080", 1300, 12, 16000);
         //Cpu max2 = new Cpu("i7 9800k", "lga 2066", 16, 5000);
 
-        System.out.println("Введите название процессора:");
+        System.out.println("Введите название процессора: ");
         Scanner sc = new Scanner(System.in);
         String cpuName = sc.nextLine();
         System.out.println("Введите название сокета: ");
