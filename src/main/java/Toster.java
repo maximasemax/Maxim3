@@ -1,7 +1,8 @@
 public class Toster implements ElectricDevice, Cooker {
     @Override
-    public void powerOn() { System.out.println("Toster is ON"); }
 
+    public void powerOn() { System.out.println("Toster is ON"); }
+    
     @Override
     public void powerOff() {
         System.out.println("Toster is OFF");

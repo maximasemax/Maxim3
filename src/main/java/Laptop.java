@@ -1,5 +1,6 @@
 public class Laptop extends Computer {
     private int weightGrams;
+
     private int batteryCapacity;
 
     public Laptop(String name) {
