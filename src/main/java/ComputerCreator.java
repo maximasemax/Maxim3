@@ -18,9 +18,9 @@ public class ComputerCreator {
         String cpuName = sc.nextLine();
         System.out.println("Введите название сокета: ");
         String cpuSocket = sc.nextLine();
-        System.out.println("Введите количество потоков");
+        System.out.println("Введите количество потоков: ");
         String cpuCores = sc.nextLine();
-        System.out.println("Ведите частоту ядер");
+        System.out.println("Ведите частоту ядер: ");
         String cpuFrequency = sc.nextLine();
         Cpu cpu1 = new Cpu(cpuName, cpuSocket, cpuCores, cpuFrequency);
 
