@@ -39,7 +39,7 @@ public class ComputerCreator {
         Keyboard max3 = new Keyboard("Readracon", "red");
         Motherboard max4 = new Motherboard("h610 MSI", "lga 2070", 4, 2, 6);
         Ram max5 = new Ram("Hiper", 2, 2868, 8, 16);
-        PersoneComputer number1 = new PersoneComputer("hiperpc", max, max1, max2, max3, max4, max5);
+        PersoneComputer number1 = new PersoneComputer("MediumPc", max, max1, max2, max3, max4, max5);
         return number1;
     }
 
