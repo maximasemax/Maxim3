@@ -1,3 +1,4 @@
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -5,21 +6,44 @@ public class Main {
 
 
     public static void main(String[] args) {
+        Warehouse computerWarehouse = new ComputerWarehouse();
+        ComputerCreator computerCreator = new ComputerCreator();
+        Computer computerHiperpc = computerCreator.createHiperpc();
+        Computer computerMediumPc = computerCreator.createMediumPc();
+        Computer computerOfficePc = computerCreator.createOfficePc();
+        computerWarehouse.addItem(computerHiperpc);
+        computerWarehouse.addItem(computerMediumPc);
+        computerWarehouse.addItem(computerOfficePc);
+        List<Computer> computers = (List<Computer>) computerWarehouse.getAllItems();
+        for (Computer computer : computers) {
+            System.out.println(computer);
+        }
+        Computer searchResult = (Computer) computerWarehouse.searchByName("OLOLO");
+        System.out.println("найден компьютер по имени ололо: ");
+        System.out.println(searchResult);
+        Computer searchResultExisting = (Computer) computerWarehouse.searchByName("OfficePc");
+        System.out.println("найден компьютер по имени OfficePc: ");
+        System.out.println(searchResultExisting);
+        System.out.println(computerHiperpc.equals(computerMediumPc));
+
+    }
+
+
 //        ComputerCreator computerCreator = new ComputerCreator();
 //        System.out.println(computerCreator.create());
-        ElectricDevice laptop = new Laptop("Test");
-        ElectricDevice toster = new Toster();
-        ((Toster) toster).cook();
-
-        ((Laptop) laptop).closeLid();
-
-        ElectricDevice[] devices = {laptop, toster};
-        for(ElectricDevice device : devices) {
-            device.powerOn();
-        }
-
-        for(ElectricDevice device : devices) {
-            device.powerOff();
-        }
-    }
+//        ElectricDevice laptop = new Laptop("Test");
+//        ElectricDevice toster = new Toster();
+//        ((Toster) toster).cook();
+//
+//        ((Laptop) laptop).closeLid();
+//
+//        ElectricDevice[] devices = {laptop, toster};
+//        for(ElectricDevice device : devices) {
+//            device.powerOn();
+//        }
+//
+//        for(ElectricDevice device : devices) {
+//            device.powerOff();
+//        }
 }
+

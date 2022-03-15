@@ -1,4 +1,4 @@
-public class PersoneComputer extends Computer{
+public class PersoneComputer extends Computer {
     private AssemblyIn assemblyIn;
 
     private Mouse mouse;
@@ -15,23 +15,29 @@ public class PersoneComputer extends Computer{
 
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
+        String lineBreak = "\n";
         stringBuilder.append("Computer type: ");
         stringBuilder.append(assemblyIn.FRAME);
-        stringBuilder.append("\n\n");
+        stringBuilder.append(lineBreak);
+        stringBuilder.append(lineBreak);
         stringBuilder.append("Computer name: ");
         stringBuilder.append(this.name);
-        stringBuilder.append(".\n");
+        stringBuilder.append(".");
+        stringBuilder.append(lineBreak);
         stringBuilder.append(this.cpu);
-        stringBuilder.append("\n");
+        stringBuilder.append(lineBreak);
         stringBuilder.append(this.videoAdapter);
-        stringBuilder.append("\n");
+        stringBuilder.append(lineBreak);
         stringBuilder.append(this.mouse);
-        stringBuilder.append("\n");
+        stringBuilder.append(lineBreak);
         stringBuilder.append(this.keyboard);
-        stringBuilder.append("\n");
+        stringBuilder.append(lineBreak);
         stringBuilder.append(this.motherboard);
-        stringBuilder.append("\n");
+        stringBuilder.append(lineBreak);
         stringBuilder.append(this.ram);
+        stringBuilder.append(lineBreak);
+        stringBuilder.append("==========================================================================================");
+
 
         return stringBuilder.toString();
 
