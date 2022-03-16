@@ -33,17 +33,17 @@ public class Ram {
     }
     public boolean equals(Object obj) {
         Ram otherRam = (Ram) obj;
-        if (otherRam != null) {
+        if (otherRam == null) {
             return false;
         }
-        if (obj instanceof Ram){
+        if (!(obj instanceof Ram)){
             return false;
         }
-        if (!this.name.equals(otherRam.name)
-                || this.slots != otherRam.size
-                || this.frequency != otherRam.frequency
-                || this.size != otherRam.size
-                || this.totalSize != otherRam.totalSize) {
+        if (!(this.name.equals(otherRam.name)
+                && this.slots == otherRam.slots
+                && this.frequency == otherRam.frequency
+                && this.size == otherRam.size
+                && this.totalSize == otherRam.totalSize)) {
             System.out.println("Память не совпадают");
             return false;
         }

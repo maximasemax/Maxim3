@@ -28,15 +28,15 @@ public class VideoAdapter {
     }
     public boolean equals(Object obj) {
         VideoAdapter otherVideoAdapter = (VideoAdapter) obj;
-        if (otherVideoAdapter != null) {
+        if (otherVideoAdapter == null) {
             return false;
         }
-        if (obj instanceof VideoAdapter) {
+        if (!(obj instanceof VideoAdapter)) {
 
         }
-        if (!this.name.equals(otherVideoAdapter.name)
-                || this.coreFrequency != otherVideoAdapter.coreFrequency
-                || this.coreFrequency != otherVideoAdapter.coreFrequency) {
+        if (!(this.name.equals(otherVideoAdapter.name)
+                && this.coreFrequency == otherVideoAdapter.coreFrequency
+                && this.coreFrequency == otherVideoAdapter.coreFrequency)) {
             System.out.println("Видеокарты разные не совпадают");
             return false;
         }

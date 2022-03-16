@@ -25,15 +25,15 @@ public class Mouse {
 
     public boolean equals(Object obj) {
         Mouse otherMouse = (Mouse) obj;
-        if (otherMouse != null) {
+        if (otherMouse == null) {
             return false;
         }
-        if (obj instanceof Mouse){
+        if (!(obj instanceof Mouse)){
             return false;
         }
-        if (!this.name.equals(otherMouse.name)
-                || this.dpi != otherMouse.dpi
-                || this.weight != otherMouse.weight) {
+        if (!(this.name.equals(otherMouse.name)
+                && this.dpi == otherMouse.dpi
+                && this.weight == otherMouse.weight)) {
             System.out.println("Мышки не совпадают");
             return false;
         }

@@ -11,6 +11,8 @@ public class Main {
         Computer computerHiperpc = computerCreator.createHiperpc();
         Computer computerMediumPc = computerCreator.createMediumPc();
         Computer computerOfficePc = computerCreator.createOfficePc();
+        Computer computerMediumPc1 = computerCreator.createMediumPc1();
+        computerWarehouse.addItem(computerMediumPc1);
         computerWarehouse.addItem(computerHiperpc);
         computerWarehouse.addItem(computerMediumPc);
         computerWarehouse.addItem(computerOfficePc);
@@ -24,7 +26,7 @@ public class Main {
         Computer searchResultExisting = (Computer) computerWarehouse.searchByName("OfficePc");
         System.out.println("найден компьютер по имени OfficePc: ");
         System.out.println(searchResultExisting);
-        System.out.println(computerHiperpc.equals(computerMediumPc));
+        System.out.println(computerMediumPc.equals(computerMediumPc1));
 
     }
 

@@ -32,17 +32,18 @@ public class Motherboard {
     }
     public boolean equals(Object obj){
         Motherboard otherMotherboard = (Motherboard) obj;
-        if (obj != null){
+        if (obj == null){
             return false;
         }
-        if (obj instanceof Motherboard){
+        if (!(obj instanceof Motherboard)){
             return false;
         }
-        if (!this.name.equals(otherMotherboard.name)
-                || !this.socket.equals(otherMotherboard.socket)
-                || this.ramSlot != otherMotherboard.ramSlot
-                || this.videAdapterSlot != otherMotherboard.videAdapterSlot
-                || this.usbSlot != otherMotherboard.usbSlot){
+        if (!(this.name.equals(otherMotherboard.name)
+                && this.socket.equals(otherMotherboard.socket)
+                && this.ramSlot == otherMotherboard.ramSlot
+                && this.videAdapterSlot == otherMotherboard.videAdapterSlot
+                && this.usbSlot == otherMotherboard.usbSlot)){
+            System.out.println("Материнские палты не совпадают");
             return false;
         }
         return true;
