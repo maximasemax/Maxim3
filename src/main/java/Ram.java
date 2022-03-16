@@ -31,4 +31,22 @@ public class Ram {
         return stringBuilder.toString();
         //return "\nRam: " + this.name + ".\nCharacteristic: " + "Slots" + this.slots + ", Frequency: " + this.frequency + ", Size: " + this.size + ", Total size: " + this.totalSize + ".";
     }
+    public boolean equals(Object obj) {
+        Ram otherRam = (Ram) obj;
+        if (otherRam != null) {
+            return false;
+        }
+        if (obj instanceof Ram){
+            return false;
+        }
+        if (!this.name.equals(otherRam.name)
+                || this.slots != otherRam.size
+                || this.frequency != otherRam.frequency
+                || this.size != otherRam.size
+                || this.totalSize != otherRam.totalSize) {
+            System.out.println("Память не совпадают");
+            return false;
+        }
+        return true;
+    }
 }

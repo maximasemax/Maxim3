@@ -30,4 +30,21 @@ public class Motherboard {
         return stringBuilder.toString();
         //return "\nMotherboard: " + this.name + ".\nCharacteristic: " + "socket: " + this.socket + ", ram slot: " + this.ramSlot + ", vide adapter slot: " + this.videAdapterSlot + ", usb slot: " + this.usbSlot + ".";
     }
+    public boolean equals(Object obj){
+        Motherboard otherMotherboard = (Motherboard) obj;
+        if (obj != null){
+            return false;
+        }
+        if (obj instanceof Motherboard){
+            return false;
+        }
+        if (!this.name.equals(otherMotherboard.name)
+                || !this.socket.equals(otherMotherboard.socket)
+                || this.ramSlot != otherMotherboard.ramSlot
+                || this.videAdapterSlot != otherMotherboard.videAdapterSlot
+                || this.usbSlot != otherMotherboard.usbSlot){
+            return false;
+        }
+        return true;
+    }
 }

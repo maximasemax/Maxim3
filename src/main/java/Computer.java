@@ -57,11 +57,21 @@ public class Computer extends WarehouseItem implements ElectricDevice {
     @Override
     public boolean equals(Object obj) {
         Computer otherComputer = (Computer) obj;
-        if (!this.motherboard.equals(otherComputer.motherboard) | !this.name.equals(otherComputer.name) | !this.ram.equals(otherComputer.ram) | !this.cpu.equals(otherComputer.cpu) | !this.videoAdapter.equals(otherComputer.videoAdapter)){
+        if (obj == null ) {
             return false;
         }
-        return  true;
-
+        if (!(obj instanceof Computer)){
+            return false;
+        }
+        if (!(this.motherboard.equals(otherComputer.motherboard)
+                && this.name.equals(otherComputer.name)
+                && this.ram.equals(otherComputer.ram)
+                && this.cpu.equals(otherComputer.cpu)
+                && this.videoAdapter.equals(otherComputer.videoAdapter))) {
+            System.out.println("Совпадения нету");
+            return false;
+        }
+        return true;
 //        boolean equalsName = this.name == otherComputer.name;
 //        boolean equalsVideoAdapter = this.videoAdapter == otherComputer.videoAdapter;
 
