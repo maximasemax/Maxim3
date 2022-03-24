@@ -1,12 +1,16 @@
-import java.util.ArrayList;
-import java.util.List;
+package model;
 
-public class Computer extends WarehouseItem implements ElectricDevice {
+import model.hardware.Cpu;
+import model.hardware.Motherboard;
+import model.hardware.RamConfiguration;
+import model.hardware.VideoAdapter;
+
+public class Computer  {
     protected String name;
     protected VideoAdapter videoAdapter;
     protected Cpu cpu;
-    protected Ram ram;
     protected Motherboard motherboard;
+    protected RamConfiguration ramConfiguration ;
 
 
 
@@ -14,12 +18,12 @@ public class Computer extends WarehouseItem implements ElectricDevice {
         this.name = name;
     }
 
-    public Computer(String name, VideoAdapter videoAdapter, Cpu cpu, Ram ram, Motherboard motherboard){
+    public Computer(String name, VideoAdapter videoAdapter, Cpu cpu, RamConfiguration ramConfiguration, Motherboard motherboard){
         this.name = name;
         this.videoAdapter = videoAdapter;
         this.cpu = cpu;
-        this.ram = ram;
         this.motherboard = motherboard;
+        this.ramConfiguration = ramConfiguration;
     }
 
     public String getName() {
@@ -30,7 +34,7 @@ public class Computer extends WarehouseItem implements ElectricDevice {
         StringBuilder stringBuilder = new StringBuilder();
         String lineBreak = "\n";
         stringBuilder.append(lineBreak);
-        stringBuilder.append("Computer name: ");
+        stringBuilder.append("model.Computer name: ");
         stringBuilder.append(this.name);
         stringBuilder.append(".");
         stringBuilder.append(lineBreak);
@@ -40,20 +44,22 @@ public class Computer extends WarehouseItem implements ElectricDevice {
         stringBuilder.append(lineBreak);
         stringBuilder.append(this.motherboard);
         stringBuilder.append(lineBreak);
-        stringBuilder.append(this.ram);
+        stringBuilder.append("model.hardware.Ram memory");
+        stringBuilder.append(ramConfiguration);
         stringBuilder.append(lineBreak);
         stringBuilder.append("===========================================");
 
         return stringBuilder.toString();
     }
     public void powerOn(){
-        System.out.println(String.format("Computer '%s' is ON", name));
+        System.out.println(String.format("model.Computer '%s' is ON", name));
     }
 
-    @Override
+
     public void powerOff() {
-        System.out.println(String.format("Computer '%s' is OFF", name));
+        System.out.println(String.format("model.Computer '%s' is OFF", name));
     }
+
     @Override
     public boolean equals(Object obj) {
         Computer otherComputer = (Computer) obj;
@@ -64,13 +70,14 @@ public class Computer extends WarehouseItem implements ElectricDevice {
             return false;
         }
         if (!(this.motherboard.equals(otherComputer.motherboard)
+                && this.ramConfiguration.equals(otherComputer.ramConfiguration)
                 && this.name.equals(otherComputer.name)
-                && this.ram.equals(otherComputer.ram)
                 && this.cpu.equals(otherComputer.cpu)
                 && this.videoAdapter.equals(otherComputer.videoAdapter))) {
             System.out.println("Совпадения нету");
             return false;
         }
+        //FIXME РЕДАКТИРОВАТЬ МЕТОД EQUALS под ramConfiguration
         return true;
 //        boolean equalsName = this.name == otherComputer.name;
 //        boolean equalsVideoAdapter = this.videoAdapter == otherComputer.videoAdapter;
@@ -78,4 +85,7 @@ public class Computer extends WarehouseItem implements ElectricDevice {
 
     }
 
+    public RamConfiguration getRamConfiguration() {
+        return ramConfiguration;
+    }
 }

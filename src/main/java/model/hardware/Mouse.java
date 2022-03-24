@@ -1,3 +1,5 @@
+package model.hardware;
+
 public class Mouse {
     private String name;
     private int dpi;
@@ -11,7 +13,7 @@ public class Mouse {
 
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("\nMouse: ");
+        stringBuilder.append("\nmodel.hardware.Mouse: ");
         stringBuilder.append(this.name);
         stringBuilder.append(".\nCharacteristic: ");
         stringBuilder.append("dpi: ");

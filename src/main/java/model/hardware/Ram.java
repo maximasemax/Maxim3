@@ -1,33 +1,30 @@
+package model.hardware;
+
 public class Ram {
     private String name;
-    private int slots;
     private int frequency;
     private int size;
-    private int totalSize;
 
-    public Ram(String name, int slots, int frequency, int size, int totalSize) {
+
+    public Ram(String name, int frequency, int size) {
         this.name = name;
-        this.slots = slots;
         this.frequency = frequency;
         this.size = size;
-        this.totalSize = totalSize;
 
     }
 
+
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("\nRam: ");
+        stringBuilder.append("\nmodel.hardware.Ram: ");
         stringBuilder.append(this.name);
         stringBuilder.append(".\nCharacteristic: ");
-        stringBuilder.append("Slots");
-        stringBuilder.append(this.slots);
-        stringBuilder.append(", Frequency: ");
+        stringBuilder.append("Frequency: ");
         stringBuilder.append(this.frequency);
         stringBuilder.append(", Size: ");
         stringBuilder.append(this.size);
-        stringBuilder.append(", Total size: ");
-        stringBuilder.append(this.totalSize);
         stringBuilder.append(".");
+        stringBuilder.append("\n");
         return stringBuilder.toString();
         //return "\nRam: " + this.name + ".\nCharacteristic: " + "Slots" + this.slots + ", Frequency: " + this.frequency + ", Size: " + this.size + ", Total size: " + this.totalSize + ".";
     }
@@ -40,13 +37,14 @@ public class Ram {
             return false;
         }
         if (!(this.name.equals(otherRam.name)
-                && this.slots == otherRam.slots
                 && this.frequency == otherRam.frequency
-                && this.size == otherRam.size
-                && this.totalSize == otherRam.totalSize)) {
+                && this.size == otherRam.size)) {
             System.out.println("Память не совпадают");
             return false;
         }
         return true;
+    }
+    public String getName(){
+        return this.name;
     }
 }

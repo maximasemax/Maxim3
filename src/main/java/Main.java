@@ -1,4 +1,7 @@
-import java.util.List;
+import model.Computer;
+import model.hardware.Ram;
+import service.ComputerCreator;
+
 import java.util.Scanner;
 
 public class Main {
@@ -6,38 +9,60 @@ public class Main {
 
 
     public static void main(String[] args) {
-        Warehouse computerWarehouse = new ComputerWarehouse();
         ComputerCreator computerCreator = new ComputerCreator();
         Computer computerHiperpc = computerCreator.createHiperpc();
         Computer computerMediumPc = computerCreator.createMediumPc();
         Computer computerOfficePc = computerCreator.createOfficePc();
         Computer computerMediumPc1 = computerCreator.createMediumPc1();
-        computerWarehouse.addItem(computerMediumPc1);
-        computerWarehouse.addItem(computerHiperpc);
-        computerWarehouse.addItem(computerMediumPc);
-        computerWarehouse.addItem(computerOfficePc);
-        List<Computer> computers = (List<Computer>) computerWarehouse.getAllItems();
-        for (Computer computer : computers) {
-            System.out.println(computer);
+        System.out.println("Rams with name lol");
+        for (Ram ram : computerMediumPc.getRamConfiguration().searchByName("hyperx")){
+            System.out.println(ram);
         }
-        Computer searchResult = (Computer) computerWarehouse.searchByName("OLOLO");
-        System.out.println("найден компьютер по имени ололо: ");
-        System.out.println(searchResult);
-        Computer searchResultExisting = (Computer) computerWarehouse.searchByName("OfficePc");
-        System.out.println("найден компьютер по имени OfficePc: ");
-        System.out.println(searchResultExisting);
+        System.out.println("=============================================================");
+        System.out.println("All Rams in model.Computer");
+        for (Ram ram : computerMediumPc.getRamConfiguration().getAllItems()){
+            System.out.println(ram);
+        }
+        System.out.println("=============================================================");
         System.out.println(computerMediumPc.equals(computerMediumPc1));
 
     }
 
 
-//        ComputerCreator computerCreator = new ComputerCreator();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//        service.ComputerCreator computerCreator = new service.ComputerCreator();
 //        System.out.println(computerCreator.create());
-//        ElectricDevice laptop = new Laptop("Test");
+//        ElectricDevice laptop = new model.Laptop("Test");
 //        ElectricDevice toster = new Toster();
 //        ((Toster) toster).cook();
 //
-//        ((Laptop) laptop).closeLid();
+//        ((model.Laptop) laptop).closeLid();
 //
 //        ElectricDevice[] devices = {laptop, toster};
 //        for(ElectricDevice device : devices) {

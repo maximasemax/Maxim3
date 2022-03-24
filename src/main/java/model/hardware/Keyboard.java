@@ -1,3 +1,5 @@
+package model.hardware;
+
 public class Keyboard {
     private String name;
     private String switchs;
@@ -9,7 +11,7 @@ public class Keyboard {
 
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("\nKeyboard: ");
+        stringBuilder.append("\nmodel.hardware.Keyboard: ");
         stringBuilder.append(this.name);
         stringBuilder.append("\nCharacteristic: ");
         stringBuilder.append("switchs: ");

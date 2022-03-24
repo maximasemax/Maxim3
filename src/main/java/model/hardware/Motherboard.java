@@ -1,3 +1,5 @@
+package model.hardware;
+
 public class Motherboard {
     private String name;
     private String socket;
@@ -15,7 +17,7 @@ public class Motherboard {
 
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("\nMotherboard: ");
+        stringBuilder.append("\nmodel.hardware.Motherboard: ");
         stringBuilder.append(this.name);
         stringBuilder.append(".\nCharacteristic: ");
         stringBuilder.append("socket: ");

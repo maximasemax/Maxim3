@@ -1,13 +1,18 @@
-public class PersoneComputer extends Computer {
+package model;
+
+import model.hardware.*;
+
+public class PersonalComputer extends Computer {
     private AssemblyIn assemblyIn;
 
-    private Mouse mouse;
-    private Keyboard keyboard;
+    private final Mouse mouse;
+    private final Keyboard keyboard;
+    private RamConfigurationOption ramConfigurationOption;
 
 
 
-    public PersoneComputer(String name, Mouse mouse, VideoAdapter videoAdapter, Cpu cpu, Keyboard keyboard, Motherboard motherboard, Ram ram) {
-        super(name, videoAdapter, cpu, ram, motherboard);
+    public PersonalComputer(String name, Mouse mouse, VideoAdapter videoAdapter, Cpu cpu, Keyboard keyboard, Motherboard motherboard, RamConfiguration ramConfiguration) {
+        super(name, videoAdapter, cpu,ramConfiguration , motherboard);
         this.mouse = mouse;
         this.keyboard = keyboard;
 
@@ -34,14 +39,17 @@ public class PersoneComputer extends Computer {
         stringBuilder.append(lineBreak);
         stringBuilder.append(this.motherboard);
         stringBuilder.append(lineBreak);
-        stringBuilder.append(this.ram);
+        stringBuilder.append(lineBreak);
+        stringBuilder.append("Ram memory: ");
+        stringBuilder.append(lineBreak);
+        stringBuilder.append(ramConfiguration);
         stringBuilder.append(lineBreak);
         stringBuilder.append("==========================================================================================");
 
 
         return stringBuilder.toString();
 
-        //return "Computer name: " + this.name + ".\n" + this.cpu + "\n" + this.videoAdapter + "\n" + this.mouse + "\n" + this.keyboard + "\n" + this.motherboard + "\n" + this.ram;
+        //return "model.Computer name: " + this.name + ".\n" + this.cpu + "\n" + this.videoAdapter + "\n" + this.mouse + "\n" + this.keyboard + "\n" + this.motherboard + "\n" + this.ram;
     }
 }
 

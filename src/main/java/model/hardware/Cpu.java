@@ -1,3 +1,5 @@
+package model.hardware;
+
 public class Cpu {
     private String name;
     private String socket;

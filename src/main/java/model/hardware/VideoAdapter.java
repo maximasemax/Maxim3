@@ -1,3 +1,5 @@
+package model.hardware;
+
 public class VideoAdapter {
     private String name;
     private int coreFrequency;
@@ -13,7 +15,7 @@ public class VideoAdapter {
 
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("\nVideoAdapter: ");
+        stringBuilder.append("\nmodel.hardware.VideoAdapter: ");
         stringBuilder.append(this.name);
         stringBuilder.append(".\nCharacteristic: ");
         stringBuilder.append("core frequency: ");
