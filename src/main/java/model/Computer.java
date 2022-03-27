@@ -1,9 +1,6 @@
 package model;
 
-import model.hardware.Cpu;
-import model.hardware.Motherboard;
-import model.hardware.RamConfiguration;
-import model.hardware.VideoAdapter;
+import model.hardware.*;
 
 public class Computer  {
     protected String name;
@@ -11,6 +8,7 @@ public class Computer  {
     protected Cpu cpu;
     protected Motherboard motherboard;
     protected RamConfiguration ramConfiguration ;
+    protected HddConfiguration hddConfiguration;
 
 
 
@@ -18,12 +16,13 @@ public class Computer  {
         this.name = name;
     }
 
-    public Computer(String name, VideoAdapter videoAdapter, Cpu cpu, RamConfiguration ramConfiguration, Motherboard motherboard){
+    public Computer(String name, VideoAdapter videoAdapter, Cpu cpu, RamConfiguration ramConfiguration, HddConfiguration hddConfiguration, Motherboard motherboard){
         this.name = name;
         this.videoAdapter = videoAdapter;
         this.cpu = cpu;
         this.motherboard = motherboard;
         this.ramConfiguration = ramConfiguration;
+        this.hddConfiguration = hddConfiguration;
     }
 
     public String getName() {
@@ -34,7 +33,7 @@ public class Computer  {
         StringBuilder stringBuilder = new StringBuilder();
         String lineBreak = "\n";
         stringBuilder.append(lineBreak);
-        stringBuilder.append("model.Computer name: ");
+        stringBuilder.append("Computer name: ");
         stringBuilder.append(this.name);
         stringBuilder.append(".");
         stringBuilder.append(lineBreak);
@@ -44,8 +43,11 @@ public class Computer  {
         stringBuilder.append(lineBreak);
         stringBuilder.append(this.motherboard);
         stringBuilder.append(lineBreak);
-        stringBuilder.append("model.hardware.Ram memory");
+        stringBuilder.append("Ram memory");
         stringBuilder.append(ramConfiguration);
+        stringBuilder.append(lineBreak);
+        stringBuilder.append("Hdd memory: ");
+        stringBuilder.append(hddConfiguration);
         stringBuilder.append(lineBreak);
         stringBuilder.append("===========================================");
 
@@ -71,13 +73,14 @@ public class Computer  {
         }
         if (!(this.motherboard.equals(otherComputer.motherboard)
                 && this.ramConfiguration.equals(otherComputer.ramConfiguration)
+                && this.hddConfiguration.equals(otherComputer.hddConfiguration)
                 && this.name.equals(otherComputer.name)
                 && this.cpu.equals(otherComputer.cpu)
                 && this.videoAdapter.equals(otherComputer.videoAdapter))) {
             System.out.println("Совпадения нету");
             return false;
         }
-        //FIXME РЕДАКТИРОВАТЬ МЕТОД EQUALS под ramConfiguration
+        //FIXME РЕДАКТИРОВАТЬ МЕТОД EQUALS под ramConfiguration +
         return true;
 //        boolean equalsName = this.name == otherComputer.name;
 //        boolean equalsVideoAdapter = this.videoAdapter == otherComputer.videoAdapter;
@@ -87,5 +90,9 @@ public class Computer  {
 
     public RamConfiguration getRamConfiguration() {
         return ramConfiguration;
+    }
+
+    public HddConfiguration getHddConfiguration(){
+        return hddConfiguration;
     }
 }

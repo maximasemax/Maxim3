@@ -7,12 +7,13 @@ public class PersonalComputer extends Computer {
 
     private final Mouse mouse;
     private final Keyboard keyboard;
-    private RamConfigurationOption ramConfigurationOption;
+    private RamConfiguration ramConfiguration;
+    private HddConfiguration hddConfiguration;
 
 
 
-    public PersonalComputer(String name, Mouse mouse, VideoAdapter videoAdapter, Cpu cpu, Keyboard keyboard, Motherboard motherboard, RamConfiguration ramConfiguration) {
-        super(name, videoAdapter, cpu,ramConfiguration , motherboard);
+    public PersonalComputer(String name, Mouse mouse, VideoAdapter videoAdapter, Cpu cpu, Keyboard keyboard, Motherboard motherboard, RamConfiguration ramConfiguration, HddConfiguration hddConfiguration) {
+        super(name, videoAdapter, cpu,ramConfiguration ,hddConfiguration, motherboard);
         this.mouse = mouse;
         this.keyboard = keyboard;
 
@@ -43,6 +44,10 @@ public class PersonalComputer extends Computer {
         stringBuilder.append("Ram memory: ");
         stringBuilder.append(lineBreak);
         stringBuilder.append(ramConfiguration);
+        stringBuilder.append(lineBreak);
+        stringBuilder.append(lineBreak);
+        stringBuilder.append("Hdd memory: ");
+        stringBuilder.append(hddConfiguration);
         stringBuilder.append(lineBreak);
         stringBuilder.append("==========================================================================================");
 

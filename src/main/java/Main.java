@@ -1,4 +1,5 @@
 import model.Computer;
+import model.hardware.Hdd;
 import model.hardware.Ram;
 import service.ComputerCreator;
 
@@ -14,16 +15,27 @@ public class Main {
         Computer computerMediumPc = computerCreator.createMediumPc();
         Computer computerOfficePc = computerCreator.createOfficePc();
         Computer computerMediumPc1 = computerCreator.createMediumPc1();
-        System.out.println("Rams with name lol");
+        System.out.println("Rams with name hiperx");
         for (Ram ram : computerMediumPc.getRamConfiguration().searchByName("hyperx")){
             System.out.println(ram);
         }
         System.out.println("=============================================================");
-        System.out.println("All Rams in model.Computer");
+        System.out.println("All Rams Computer");
         for (Ram ram : computerMediumPc.getRamConfiguration().getAllItems()){
             System.out.println(ram);
         }
         System.out.println("=============================================================");
+        System.out.println("Hdds with name baracuda");
+        for (Hdd hdd : computerMediumPc.getHddConfiguration().searchByName("baracuda")){
+            System.out.println(hdd);
+        }
+        System.out.println("=============================================================");
+        System.out.println("All Hdds Computer");
+        for (Hdd hdd : computerMediumPc.getHddConfiguration().getAllItems()){
+            System.out.println(hdd);
+        }
+        System.out.println("=============================================================");
+
         System.out.println(computerMediumPc.equals(computerMediumPc1));
 
     }
