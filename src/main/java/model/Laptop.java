@@ -13,7 +13,7 @@ public class Laptop extends Computer {
         super(name);
     }
 
-    public Laptop(String name, VideoAdapter videoAdapter, Cpu cpu, RamConfiguration ramConfiguration,HddConfiguration hddConfiguration, Motherboard motherboard, int weightGrams, int batteryCapacity) {
+    public Laptop(String name, VideoAdapter videoAdapter, Cpu cpu, RamConfiguration ramConfiguration, HddConfiguration hddConfiguration, Motherboard motherboard, int weightGrams, int batteryCapacity) {
         super(name, videoAdapter, cpu, ramConfiguration, hddConfiguration, motherboard);
         this.weightGrams = weightGrams;
         this.batteryCapacity = batteryCapacity;

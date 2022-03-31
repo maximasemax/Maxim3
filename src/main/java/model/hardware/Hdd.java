@@ -31,7 +31,7 @@ public class Hdd {
         if (otherHdd == null) {
             return false;
         }
-        if (!(obj instanceof Hdd)){
+        if (!(obj instanceof Hdd)) {
             return false;
         }
         if (!(this.name.equals(otherHdd.name)
@@ -42,7 +42,7 @@ public class Hdd {
         return true;
     }
 
-    public String getName(){
+    public String getName() {
         return this.name;
     }
 

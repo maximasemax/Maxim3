@@ -28,6 +28,7 @@ public class VideoAdapter {
         return stringBuilder.toString();
         //return "\nVideoAdapter: " + this.name + ".\nCharacteristic: " + "core frequency: "  + this.coreFrequency + ", ram: " + this.ram + ", ram frequency: " + this.ramFrequency + ".";
     }
+
     public boolean equals(Object obj) {
         VideoAdapter otherVideoAdapter = (VideoAdapter) obj;
         if (otherVideoAdapter == null) {

@@ -2,21 +2,20 @@ package model;
 
 import model.hardware.*;
 
-public class Computer  {
+public class Computer {
     protected String name;
     protected VideoAdapter videoAdapter;
     protected Cpu cpu;
     protected Motherboard motherboard;
-    protected RamConfiguration ramConfiguration ;
+    protected RamConfiguration ramConfiguration;
     protected HddConfiguration hddConfiguration;
-
 
 
     public Computer(String name) {
         this.name = name;
     }
 
-    public Computer(String name, VideoAdapter videoAdapter, Cpu cpu, RamConfiguration ramConfiguration, HddConfiguration hddConfiguration, Motherboard motherboard){
+    public Computer(String name, VideoAdapter videoAdapter, Cpu cpu, RamConfiguration ramConfiguration, HddConfiguration hddConfiguration, Motherboard motherboard) {
         this.name = name;
         this.videoAdapter = videoAdapter;
         this.cpu = cpu;
@@ -53,7 +52,8 @@ public class Computer  {
 
         return stringBuilder.toString();
     }
-    public void powerOn(){
+
+    public void powerOn() {
         System.out.println(String.format("model.Computer '%s' is ON", name));
     }
 
@@ -65,10 +65,10 @@ public class Computer  {
     @Override
     public boolean equals(Object obj) {
         Computer otherComputer = (Computer) obj;
-        if (obj == null ) {
+        if (obj == null) {
             return false;
         }
-        if (!(obj instanceof Computer)){
+        if (!(obj instanceof Computer)) {
             return false;
         }
         if (!(this.motherboard.equals(otherComputer.motherboard)
@@ -91,7 +91,7 @@ public class Computer  {
         return ramConfiguration;
     }
 
-    public HddConfiguration getHddConfiguration(){
+    public HddConfiguration getHddConfiguration() {
         return hddConfiguration;
     }
 

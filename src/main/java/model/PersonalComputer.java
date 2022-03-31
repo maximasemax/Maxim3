@@ -11,9 +11,8 @@ public class PersonalComputer extends Computer {
     private HddConfiguration hddConfiguration;
 
 
-
     public PersonalComputer(String name, Mouse mouse, VideoAdapter videoAdapter, Cpu cpu, Keyboard keyboard, Motherboard motherboard, RamConfiguration ramConfiguration, HddConfiguration hddConfiguration) {
-        super(name, videoAdapter, cpu,ramConfiguration ,hddConfiguration, motherboard);
+        super(name, videoAdapter, cpu, ramConfiguration, hddConfiguration, motherboard);
         this.mouse = mouse;
         this.keyboard = keyboard;
 
@@ -51,19 +50,15 @@ public class PersonalComputer extends Computer {
         stringBuilder.append(lineBreak);
         stringBuilder.append("==========================================================================================");
 
-
         return stringBuilder.toString();
-
-        //return "model.Computer name: " + this.name + ".\n" + this.cpu + "\n" + this.videoAdapter + "\n" + this.mouse + "\n" + this.keyboard + "\n" + this.motherboard + "\n" + this.ram;
     }
 }
 
 
 
 
-/*
-
-В компе у нас клавиатура, мышь, монитор, проц, мать), оперативная память, видюха, жестач, наушники вроде все
 
 
- */
+
+
+

@@ -8,27 +8,6 @@ public class HaveFan {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //    public String vivod() {
 //        int size = 21;
 //        int stars = 1;

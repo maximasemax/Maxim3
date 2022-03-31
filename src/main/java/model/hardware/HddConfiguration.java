@@ -31,17 +31,17 @@ public class HddConfiguration implements HddConfigurationOption {
 
     @Override
     public void removeHdd(String name) {
-        for (Hdd hdd : hdds){
-            if (hdd.getName().equalsIgnoreCase(name)){
+        for (Hdd hdd : hdds) {
+            if (hdd.getName().equalsIgnoreCase(name)) {
                 hdds.remove(hdd);
             }
         }
     }
 
-    public List<Hdd> searchByName(String name){
+    public List<Hdd> searchByName(String name) {
         List<Hdd> result = new ArrayList<>();
-        for (Hdd hdd : hdds){
-            if (hdd.getName().equalsIgnoreCase(name)){
+        for (Hdd hdd : hdds) {
+            if (hdd.getName().equalsIgnoreCase(name)) {
                 result.add(hdd);
             }
         }
@@ -57,10 +57,11 @@ public class HddConfiguration implements HddConfigurationOption {
 
         return stringBuilder.toString();
     }
-    public void editHdd(String name, int size, Hdd hdd1){
+
+    public void editHdd(String name, int size, Hdd hdd1) {
         for (Hdd hdd : hdds)
             if (hdd.getName().equalsIgnoreCase(name)
-            || hdd.getSize() == size){
+                    || hdd.getSize() == size) {
                 hdd.setName(hdd1.getName());
                 hdd.setFrequency(hdd1.getFrequency());
                 hdd.setSize(hdd1.getSize());

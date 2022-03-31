@@ -10,7 +10,7 @@ public class ComputerCreatorTest {
 
 
     @Test
-    public void ComputerHyperPcTest(){
+    public void computerHyperPcTest() {
         ComputerCreator computerCreator = new ComputerCreator();
         Computer computerHiperpc = computerCreator.createHiperpc();
         Assertions.assertNotNull(computerHiperpc);
@@ -20,12 +20,12 @@ public class ComputerCreatorTest {
         Assertions.assertNotNull(computerHiperpc.getCpu());
         Assertions.assertNotNull(computerHiperpc.getMotherboard());
         Assertions.assertNotNull(computerHiperpc.getVideoAdapter());
-        Ram ramNull = null;
-        Assertions.assertFalse(computerHiperpc.getRamConfiguration().getAllItems().contains(ramNull));
 
+        Assertions.assertFalse(computerHiperpc.getRamConfiguration().getAllItems().contains(null));
+        Assertions.assertFalse(computerHiperpc.getRamConfiguration().getAllItems().isEmpty());
 
-
-
+        Assertions.assertFalse(computerHiperpc.getHddConfiguration().getAllItems().contains(null));
+        Assertions.assertFalse(computerHiperpc.getHddConfiguration().getAllItems().isEmpty());
 
 
     }

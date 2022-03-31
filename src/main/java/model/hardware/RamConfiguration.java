@@ -33,10 +33,10 @@ public class RamConfiguration implements RamConfigurationOption {
         return stringBuilder.toString();
     }
 
-    public List<Ram> searchByName(String name){
+    public List<Ram> searchByName(String name) {
         List<Ram> result = new ArrayList<>();
-        for (Ram ram : rams){
-            if (ram.getName().equalsIgnoreCase(name)){
+        for (Ram ram : rams) {
+            if (ram.getName().equalsIgnoreCase(name)) {
                 result.add(ram);
             }
         }
@@ -53,8 +53,8 @@ public class RamConfiguration implements RamConfigurationOption {
 
     @Override
     public void removeRam(String name) {
-        for (Ram ram : rams){
-            if (ram.getName().equalsIgnoreCase(name)){
+        for (Ram ram : rams) {
+            if (ram.getName().equalsIgnoreCase(name)) {
                 rams.remove(ram);
             }
         }
@@ -62,9 +62,9 @@ public class RamConfiguration implements RamConfigurationOption {
 
     @Override
     public boolean editRam(String name, int size, Ram ram1) {
-        for (Ram ram : rams){
+        for (Ram ram : rams) {
             if (ram.getName().equalsIgnoreCase(name)
-                || ram.getSize() == (size)) {
+                    || ram.getSize() == (size)) {
                 ram.setName(ram1.getName());
                 ram.setSize(ram1.getSize());
                 ram.setFrequency(ram1.getFrequency());

@@ -30,7 +30,7 @@ public class Mouse {
         if (otherMouse == null) {
             return false;
         }
-        if (!(obj instanceof Mouse)){
+        if (!(obj instanceof Mouse)) {
             return false;
         }
         if (!(this.name.equals(otherMouse.name)

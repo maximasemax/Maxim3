@@ -1,6 +1,6 @@
 package model.hardware;
 
-public class  Cpu {
+public class Cpu {
     private String name;
     private String socket;
     private String cores;
@@ -28,21 +28,21 @@ public class  Cpu {
         return stringBuilder.toString();
 
 
-
         //return "\nCPU name: " + this.name + ".\nCharacteristic: " + "socket: " + this.socket + ", cores: " + this.cores + ", frequency: " + this.frequency + ".";
     }
-    public boolean equals(Object obj){
+
+    public boolean equals(Object obj) {
         Cpu otherCpu = (Cpu) obj;
-        if (otherCpu == null){
+        if (otherCpu == null) {
             return false;
         }
-        if (!(obj instanceof Cpu)){
+        if (!(obj instanceof Cpu)) {
             return false;
         }
         if (!(this.name.equals(otherCpu.name)
                 && this.socket.equals(otherCpu.socket)
                 && this.cores.equals(otherCpu.cores)
-                && this.frequency.equals(otherCpu.frequency))){
+                && this.frequency.equals(otherCpu.frequency))) {
             System.out.println("Процессоры не совпадают");
             return false;
         }

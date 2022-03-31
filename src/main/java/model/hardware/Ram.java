@@ -28,12 +28,13 @@ public class Ram {
         return stringBuilder.toString();
         //return "\nRam: " + this.name + ".\nCharacteristic: " + "Slots" + this.slots + ", Frequency: " + this.frequency + ", Size: " + this.size + ", Total size: " + this.totalSize + ".";
     }
+
     public boolean equals(Object obj) {
         Ram otherRam = (Ram) obj;
         if (otherRam == null) {
             return false;
         }
-        if (!(obj instanceof Ram)){
+        if (!(obj instanceof Ram)) {
             return false;
         }
         if (!(this.name.equals(otherRam.name)
@@ -44,7 +45,7 @@ public class Ram {
         return true;
     }
 
-    public String getName(){
+    public String getName() {
         return this.name;
     }
 
