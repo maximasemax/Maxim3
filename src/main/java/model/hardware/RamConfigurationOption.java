@@ -6,5 +6,5 @@ public interface RamConfigurationOption {
     void addRam(Ram ram);
     List<Ram> getAllItems();
     void removeRam(String name);
-    void editRam(String name, int size, Ram ram);
+    boolean editRam(String name, int size, Ram ram);
 }

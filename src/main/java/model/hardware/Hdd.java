@@ -37,7 +37,6 @@ public class Hdd {
         if (!(this.name.equals(otherHdd.name)
                 && this.frequency == otherHdd.frequency
                 && this.size == otherHdd.size)) {
-            System.out.println("Hdd не совпадают");
             return false;
         }
         return true;
@@ -49,5 +48,21 @@ public class Hdd {
 
     public int getSize() {
         return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setFrequency(int frequency) {
+        this.frequency = frequency;
+    }
+
+    public int getFrequency() {
+        return frequency;
     }
 }

@@ -57,5 +57,14 @@ public class HddConfiguration implements HddConfigurationOption {
 
         return stringBuilder.toString();
     }
+    public void editHdd(String name, int size, Hdd hdd1){
+        for (Hdd hdd : hdds)
+            if (hdd.getName().equalsIgnoreCase(name)
+            || hdd.getSize() == size){
+                hdd.setName(hdd1.getName());
+                hdd.setFrequency(hdd1.getFrequency());
+                hdd.setSize(hdd1.getSize());
+            }
+    }
 
 }

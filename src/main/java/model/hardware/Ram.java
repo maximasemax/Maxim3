@@ -39,7 +39,6 @@ public class Ram {
         if (!(this.name.equals(otherRam.name)
                 && this.frequency == otherRam.frequency
                 && this.size == otherRam.size)) {
-            System.out.println("Память не совпадают");
             return false;
         }
         return true;
@@ -51,5 +50,21 @@ public class Ram {
 
     public int getSize() {
         return size;
+    }
+
+    public int getFrequency() {
+        return frequency;
+    }
+
+    public void setFrequency(int frequency) {
+        this.frequency = frequency;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
     }
 }

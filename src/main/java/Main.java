@@ -2,6 +2,7 @@ import model.Computer;
 import model.hardware.Hdd;
 import model.hardware.Ram;
 import service.ComputerCreator;
+import service.HaveFan;
 
 import java.util.Scanner;
 
@@ -37,6 +38,18 @@ public class Main {
         System.out.println("=============================================================");
 
         System.out.println(computerMediumPc.equals(computerMediumPc1));
+
+        System.out.println("=============================================================");
+        Ram newRam = new Ram("gg", 21, 121);
+        if (!computerHiperpc.getRamConfiguration().editRam("gg", 121,newRam )){
+            System.out.println("все х ");
+        }
+        computerHiperpc.getRamConfiguration().addRam(newRam);
+        if (!computerHiperpc.getRamConfiguration().editRam("gg", 121,newRam )){
+            System.out.println("все х ");
+        }
+
+        //System.out.println(new HaveFan().vivod());
 
     }
 

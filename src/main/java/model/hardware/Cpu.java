@@ -1,6 +1,6 @@
 package model.hardware;
 
-public class Cpu {
+public class  Cpu {
     private String name;
     private String socket;
     private String cores;
@@ -47,6 +47,27 @@ public class Cpu {
             return false;
         }
         return true;
+    }
+
+    public String getCores() {
+        return cores;
+    }
+
+    public String getFrequency() {
+        return frequency;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSocket() {
+        return socket;
+    }
+
+
+    public void setCores(String cores) {
+        this.cores = cores;
     }
 
 }

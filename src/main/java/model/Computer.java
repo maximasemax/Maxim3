@@ -80,7 +80,6 @@ public class Computer  {
             System.out.println("Совпадения нету");
             return false;
         }
-        //FIXME РЕДАКТИРОВАТЬ МЕТОД EQUALS под ramConfiguration +
         return true;
 //        boolean equalsName = this.name == otherComputer.name;
 //        boolean equalsVideoAdapter = this.videoAdapter == otherComputer.videoAdapter;

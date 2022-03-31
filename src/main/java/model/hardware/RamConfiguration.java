@@ -45,7 +45,7 @@ public class RamConfiguration implements RamConfigurationOption {
 
     @Override
     public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass())
+        if (o == null || this.getClass() != o.getClass())
             return false;
         RamConfiguration that = (RamConfiguration) o;
         return Objects.equals(rams, that.rams);
@@ -61,15 +61,16 @@ public class RamConfiguration implements RamConfigurationOption {
     }
 
     @Override
-    public void editRam(String name, int size, Ram ram1) {
+    public boolean editRam(String name, int size, Ram ram1) {
         for (Ram ram : rams){
             if (ram.getName().equalsIgnoreCase(name)
                 || ram.getSize() == (size)) {
-                rams.remove(ram);
-                rams.add(ram1);
+                ram.setName(ram1.getName());
+                ram.setSize(ram1.getSize());
+                ram.setFrequency(ram1.getFrequency());
+                return true;
             }
         }
+        return false;
     }
-    //TODO сделать equals +
-    //TODO сделать редактирование(поиск по заданным параметрам и из всех что нашись берем первоеи заменяем на то что приходит если нету то выводим на экран не нашлось) и удаление(поиск по имени) удаление +, замена+
 }
