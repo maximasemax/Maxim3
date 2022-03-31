@@ -94,4 +94,17 @@ public class Computer  {
     public HddConfiguration getHddConfiguration(){
         return hddConfiguration;
     }
+
+    public Motherboard getMotherboard() {
+        return motherboard;
+    }
+
+    public VideoAdapter getVideoAdapter() {
+        return videoAdapter;
+    }
+
+    public Cpu getCpu() {
+        return cpu;
+    }
+
 }
