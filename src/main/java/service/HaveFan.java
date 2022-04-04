@@ -15,7 +15,7 @@ public class HaveFan {
 
         StringBuilder stringBuilder = new StringBuilder();
 
-        if (horizontalLength < 2){
+        if (horizontalLength <= 2){
             stringBuilder.append("Такой змейки нету");
             return stringBuilder.toString() ;
         }
