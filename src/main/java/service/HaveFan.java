@@ -13,6 +13,13 @@ public class HaveFan {
         System.out.println("Введите длину одной вертикальной части по вертикали:");
         int verticalLength = sc.nextInt();
 
+        StringBuilder stringBuilder = new StringBuilder();
+
+        if (horizontalLength < 2){
+            stringBuilder.append("Такой змейки нету");
+            return stringBuilder.toString() ;
+        }
+
         int horizontalCount = 0;
         int count = 0;
         while ((horizontalCount + horizontalLength) <= 80) {
@@ -27,7 +34,7 @@ public class HaveFan {
             countDetour = countDetour - 1;
         }
 
-        StringBuilder stringBuilder = new StringBuilder();
+
 
 
         for (int x = 0; x == 0; x++) {
