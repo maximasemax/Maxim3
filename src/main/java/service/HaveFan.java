@@ -67,7 +67,7 @@ public class HaveFan {
         }
 
 
-        int verticalLength1 = verticalLength;
+        int verticalLength1 = verticalLength - 2 ;
 
         for (int x = 1; x <= verticalLength1; x++) {
             stringBuilder.append(" ");
