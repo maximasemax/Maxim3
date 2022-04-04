@@ -15,12 +15,12 @@ public class HaveFan {
 
         int horizontalCount = 0;
         int count = 0;
-        while ((horizontalCount + horizontalLength) <= 80){
+        while ((horizontalCount + horizontalLength) <= 80) {
             horizontalCount = horizontalCount + horizontalLength;
-            count ++;
+            count++;
 
         }
-        System.out.println("количество горизонтальных частей , чтоб легче проверить" );
+        System.out.println("количество горизонтальных частей , чтоб легче проверить");
         System.out.println(count);
         int countDetour = count;
         if ((count % 2) != 0) {
@@ -101,13 +101,13 @@ public class HaveFan {
             }
         }
 
-        if ((count % 2) != 0) {
-            int horizontalLength2 = horizontalLength;
-            while (horizontalLength2 != 0) {
-                stringBuilder.append("*");
-                horizontalLength2 = horizontalLength2 - 1;
-            }
-        }
+//        if ((count % 2) != 0) {
+//            int horizontalLength2 = horizontalLength;
+//            while (horizontalLength2 != 0) {
+//                stringBuilder.append("*");
+//                horizontalLength2 = horizontalLength2 - 1;
+//            }
+//        }
         return stringBuilder.toString();
     }
 
