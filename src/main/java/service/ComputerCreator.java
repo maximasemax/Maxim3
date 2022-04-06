@@ -2,9 +2,9 @@ package service;
 
 import model.*;
 import model.hardware.*;
+// в этом класе мы создаем компьтеры в сборе
 
 public class ComputerCreator {
-    private Cpu cpu;
 
     public ComputerCreator() {
 

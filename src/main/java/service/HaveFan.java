@@ -1,6 +1,7 @@
 package service;
 
 import java.util.Scanner;
+// использую для разминку головы
 
 public class HaveFan {
     private String zvezda;

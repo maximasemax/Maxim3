@@ -3,6 +3,8 @@ package model.hardware;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+// используется для создания контейнера в компьтере чтобы можно было изменять значения быстро
+
 
 public class RamConfiguration implements RamConfigurationOption {
     private final List<Ram> rams;

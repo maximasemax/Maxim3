@@ -1,6 +1,7 @@
 package model;
 
 import model.hardware.*;
+// используется для создания персонального компьтера
 
 public class PersonalComputer extends Computer {
     private AssemblyIn assemblyIn;
